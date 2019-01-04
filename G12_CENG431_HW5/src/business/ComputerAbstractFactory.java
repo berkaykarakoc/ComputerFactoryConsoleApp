@@ -1,5 +1,7 @@
 package business;
 
-public abstract class ComputerAbstractFactory {
+public interface ComputerAbstractFactory {
 
+	public Computer createComputer();
+	
 }
