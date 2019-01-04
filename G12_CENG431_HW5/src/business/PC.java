@@ -9,6 +9,8 @@ public abstract class PC extends Computer {
 	private Keyboard keyboard;
 	private Mouse mouse;
 	
+	private int totalPrice;
+	
 	public PC(CPU cpu, RAM ram, Monitor monitor, Headphone headphone, Keyboard keyboard, Mouse mouse) {
 		this.cpu = cpu;
 		this.ram = ram;
@@ -16,6 +18,7 @@ public abstract class PC extends Computer {
 		this.headphone = headphone;
 		this.keyboard = keyboard;
 		this.mouse = mouse;
+		this.totalPrice = cpu.getPrice() + ram.getPrice() + monitor.getPrice() + headphone.getPrice() + keyboard.getPrice() + mouse.getPrice();
 	}
 
 	@Override
@@ -46,6 +49,11 @@ public abstract class PC extends Computer {
 	@Override
 	public Mouse getMouse() {
 		return this.mouse;
+	}
+
+	@Override
+	public int getTotalPrice() {
+		return totalPrice;
 	}
 
 }

@@ -3,7 +3,7 @@ package business;
 public class CopperCable extends Cable {
 
 	private final int speed = 10;
-	private final int price = 100;
+	private final int price = 0;
 	
 	public CopperCable() {
 		super();

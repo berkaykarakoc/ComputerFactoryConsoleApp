@@ -2,6 +2,7 @@ package business;
 
 public abstract class Computer {
 	
+	public abstract int getTotalPrice();
 
 	public abstract CPU getCpu();
 
@@ -18,7 +19,7 @@ public abstract class Computer {
 	public String toString() {
 		return "\nCPU: " + this.getCpu() + "\nRAM: " + this.getRam() + "\nMONITOR: " + this.getMonitor()
 		+ "\nHEADPHONE: " + this.getHeadphone() + "\nKEYBOARD: " + this.getKeyboard()
-		+ "\nMOUSE: " + this.getMouse();
+		+ "\nMOUSE: " + this.getMouse() + "\nTOTAL PRICE: " + this.getTotalPrice();
 	}
 	
 }

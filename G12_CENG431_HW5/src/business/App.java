@@ -6,9 +6,9 @@ public class App {
 		Computer gamingPc = ComputerFactory.getComputer(new GamingPCFactory());
 		Computer regularPc = ComputerFactory.getComputer(new RegularPCFactory());
 		
-		System.out.println("Gaming PC spesifications: " + gamingPc);
+		System.out.println("Gaming PC specifications: " + gamingPc);
 		System.out.println();
-		System.out.println("Regular PC spesifications: " + regularPc);
+		System.out.println("Regular PC specifications: " + regularPc);
 
 	}
 
