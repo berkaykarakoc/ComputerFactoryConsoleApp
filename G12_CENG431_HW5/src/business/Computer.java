@@ -1,25 +1,22 @@
 package business;
 
 public abstract class Computer {
+
+	public abstract Device getKeyboard();
+	public abstract Device getMouse();
+	public abstract Device getMonitor();
+	public abstract Device getHeadphone();
+	public abstract Device getCPU();
+	public abstract Device getRAM();
 	
 	public abstract int getTotalPrice();
-
-	public abstract CPU getCpu();
-
-	public abstract RAM getRam();
-
-	public abstract Monitor getMonitor();
-
-	public abstract Headphone getHeadphone();
-
-	public abstract Keyboard getKeyboard();
-
-	public abstract Mouse getMouse();
 	
+	
+	@Override
 	public String toString() {
-		return "\nCPU: " + this.getCpu() + "\nRAM: " + this.getRam() + "\nMONITOR: " + this.getMonitor()
-		+ "\nHEADPHONE: " + this.getHeadphone() + "\nKEYBOARD: " + this.getKeyboard()
-		+ "\nMOUSE: " + this.getMouse() + "\nTOTAL PRICE: " + this.getTotalPrice();
+		return "\nInput Device:" + "\n-Keyboard:" + this.getKeyboard() + "\n-Mouse:" + this.getMouse()
+		+ "\nOutput Device:" + "\n-Monitor:" + this.getMonitor() + "\n-Headphone:" + this.getHeadphone()
+		+ "\nHardware Device:" + "\n-CPU:" + this.getCPU() + "\n-RAM:" + this.getRAM() + "\n-Total Price: " + this.getTotalPrice() + " TL";
 	}
 	
 }

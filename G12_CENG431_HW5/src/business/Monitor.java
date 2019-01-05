@@ -7,11 +7,10 @@ public class Monitor extends OutputDevice {
 	private int price;
 	
 	public Monitor(int inch, int price) {
-		super();
 		this.inch = inch;
 		this.price = price;
 	}
-	
+
 	public int getInch() {
 		return inch;
 	}
@@ -20,8 +19,10 @@ public class Monitor extends OutputDevice {
 		return price;
 	}
 	
+	@Override
 	public String toString() {
-		return "Inch = " + this.getInch() + " Price = " + this.getPrice();
+		return "\n--Inch = " + this.getInch()
+				+ "\n--Price = " + this.getPrice();
 	}
 	
 }

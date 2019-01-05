@@ -2,23 +2,22 @@ package business;
 
 public class CPU extends HardwareDevice {
 
-	private String version;
-	private double frequency;
+	private final String version;
+	private float frequency;
 	
 	private int price;
 	
-	public CPU(String version, double frequency, int price) {
-		super();
+	public CPU(String version, float frequency, int price) {
 		this.version = version;
 		this.frequency = frequency;
 		this.price = price;
 	}
-	
+
 	public String getVersion() {
 		return version;
 	}
-	
-	public double getFrequency() {
+
+	public float getFrequency() {
 		return frequency;
 	}
 
@@ -26,8 +25,10 @@ public class CPU extends HardwareDevice {
 		return price;
 	}
 	
+	@Override
 	public String toString() {
-		return "Version = " + this.getVersion() + " Frequency = " + this.getFrequency() + " Price = " + this.getPrice();
+		return "\n--Version = " + this.getVersion() + "\n--Frequency = " + this.getFrequency()
+				+ "\n--Price = " + this.getPrice();
 	}
 	
 }

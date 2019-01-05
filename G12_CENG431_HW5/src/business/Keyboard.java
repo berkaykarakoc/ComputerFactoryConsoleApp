@@ -8,7 +8,6 @@ public class Keyboard extends InputDevice {
 	private int price;
 	
 	public Keyboard(int numberOfKeys, boolean hasBacklight, int price) {
-		super();
 		this.numberOfKeys = numberOfKeys;
 		this.hasBacklight = hasBacklight;
 		this.price = price;
@@ -26,8 +25,10 @@ public class Keyboard extends InputDevice {
 		return price;
 	}
 	
+	@Override
 	public String toString() {
-		return "Number of keys = " + this.getNumberOfKeys() + " Backlight = " + this.hasBacklight() + " Price = " + this.getPrice();
+		return "\n--Number of keys = " + this.getNumberOfKeys() + "\n--Has backlight = " + this.hasBacklight()
+				+ "\n--Price = " + this.getPrice();
 	}
 	
 }
