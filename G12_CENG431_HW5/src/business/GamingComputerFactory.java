@@ -24,7 +24,7 @@ public class GamingComputerFactory implements ComputerAbstractFactory {
 								(int) (Math.random()*850+300));
 		this.monitor = new Monitor(inchArray[(int)(Math.random()*4)],
 									(int)(Math.random()*3500+2500));
-		this.headphone = new Headphone(false, true, 
+		this.headphone = new Headphone(true, true, 
 										(int)(Math.random()*1900+600));
 		this.CPU = new CPU(versionArray[(int)(Math.random()*2)],
 							(float) (Math.random()*6.0+3.0),
