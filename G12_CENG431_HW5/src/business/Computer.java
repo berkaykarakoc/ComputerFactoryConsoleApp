@@ -21,7 +21,7 @@ public abstract class Computer {
 	public String toString() {
 		return "\nInput Device:" + "\n-Keyboard:" + this.getKeyboard() + "\n-Mouse:" + this.getMouse()
 		+ "\nOutput Device:" + "\n-Monitor:" + this.getMonitor() + "\n-Headphone:" + this.getHeadphone()
-		+ "\nHardware Device:" + "\n-CPU:" + this.getCPU() + "\n-RAM:" + this.getRAM() + "\n-Cable Type:" + this.getCable() + "\n-Total Price: " + this.getTotalPrice() + " TL";
+		+ "\nHardware Device:" + "\n-CPU:" + this.getCPU() + "\n-RAM:" + this.getRAM() + "\n-Cable Type:" + this.getCable() + "\n-Total Price: " + this.getTotalPrice();
 	}
 	
 }

@@ -63,7 +63,7 @@ public class SilverCableDecorator extends CableDecorator {
 	}
 	
 	private void add2Price() {
-		decoratedComputer.setCable(Cable.SILVER);
+		setCable(Cable.SILVER);
 		setTotalPrice(decoratedComputer.getTotalPrice()+350);
 	}
 
