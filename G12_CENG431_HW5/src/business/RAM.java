@@ -2,15 +2,20 @@ package business;
 
 public class RAM extends HardwareDevice {
 	
-	private double capacity;
+	private int price;
+	private int capacity;
 	
-	public RAM(double capacity) {
+	public RAM(int price, int capacity) {
 		super();
+		this.price = price;
 		this.capacity = capacity;
 	}
 	
-	public double getCapacity() {
+	public int getCapacity() {
 		return capacity;
 	}
 	
+	public int getPrice() {
+		return price;
+	}
 }

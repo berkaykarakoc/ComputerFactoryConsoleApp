@@ -1,5 +1,5 @@
 package business;
 
-public abstract class HardwareDevice {
+public abstract class HardwareDevice implements Device{
 
 }

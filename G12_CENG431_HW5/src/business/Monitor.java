@@ -2,15 +2,21 @@ package business;
 
 public class Monitor extends OutputDevice {
 
-	private double inch;
+	private int price;
+	private int inch;
 	
-	public Monitor(double inch) {
+	public Monitor(int price, int inch) {
 		super();
+		this.price = price;
 		this.inch = inch;
 	}
 	
-	public double getInch() {
+	public int getInch() {
 		return inch;
+	}
+	
+	public int getPrice() {
+		return price;
 	}
 	
 }

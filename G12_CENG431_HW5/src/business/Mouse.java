@@ -2,10 +2,12 @@ package business;
 
 public class Mouse extends InputDevice {
 	
+	private int price;
 	private boolean isWireless;
 	
-	public Mouse(boolean isWireless) {
+	public Mouse(int price, boolean isWireless) {
 		super();
+		this.price = price;
 		this.isWireless = isWireless;
 	}
 
@@ -13,4 +15,8 @@ public class Mouse extends InputDevice {
 		return isWireless;
 	}
 
+	
+	public int getPrice() {
+		return price;
+	}
 }
