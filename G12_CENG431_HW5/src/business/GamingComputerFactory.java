@@ -13,8 +13,6 @@ public class GamingComputerFactory implements ComputerAbstractFactory {
 	private Device CPU;
 	private Device RAM;
 	
-	private int totalPrice;
-	
 	public GamingComputerFactory() 
 	{
 		this.keyboard = new Keyboard((int) (Math.random()*108+84),
@@ -31,9 +29,6 @@ public class GamingComputerFactory implements ComputerAbstractFactory {
 							(int) (Math.random()*24000+14000));
 		this.RAM = new RAM(capacityArray[(int)(Math.random()*2)],
 							(int) (Math.random()*19000+7000));
-		this.totalPrice = this.keyboard.getPrice() + this.mouse.getPrice()
-		+ this.monitor.getPrice() + this.headphone.getPrice()
-		+ this.CPU.getPrice() + this.RAM.getPrice();
 	}
 	
 	public Computer createComputer() {
