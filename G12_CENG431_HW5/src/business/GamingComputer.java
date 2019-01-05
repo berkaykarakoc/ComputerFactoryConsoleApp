@@ -1,6 +1,6 @@
 package business;
 
-public class GamingComputer extends Computer{
+public class GamingComputer extends Computer {
 	
 	private Device keyboard;
 	private Device mouse;
@@ -8,6 +8,8 @@ public class GamingComputer extends Computer{
 	private Device headphone;
 	private Device CPU;
 	private Device RAM;
+	
+	private Cable cable = Cable.COPPER;
 	
 	private int totalPrice;
 
@@ -25,7 +27,11 @@ public class GamingComputer extends Computer{
 		+ this.monitor.getPrice() + this.headphone.getPrice()
 		+ this.CPU.getPrice() + this.RAM.getPrice();
 	}
-
+	
+	public void plug() {
+		
+	}
+	
 	public Device getKeyboard() {
 		return keyboard;
 	}
@@ -54,6 +60,16 @@ public class GamingComputer extends Computer{
 		return totalPrice;
 	}
 	
-	
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public Cable getCable() {
+		return cable;
+	}
+
+	public void setCable(Cable cable) {
+		this.cable = cable;
+	}
 
 }

@@ -9,6 +9,8 @@ public class RegularComputer extends Computer {
 	private Device CPU;
 	private Device RAM;
 	
+	private Cable cable = Cable.COPPER;
+	
 	private int totalPrice;
 
 	public RegularComputer(Device keyboard, Device mouse,
@@ -24,6 +26,10 @@ public class RegularComputer extends Computer {
 		this.totalPrice = this.keyboard.getPrice() + this.mouse.getPrice()
 						+ this.monitor.getPrice() + this.headphone.getPrice()
 						+ this.CPU.getPrice() + this.RAM.getPrice();
+	}
+	
+	public void plug() {
+		
 	}
 
 	public Device getKeyboard() {
@@ -54,6 +60,16 @@ public class RegularComputer extends Computer {
 		return totalPrice;
 	}
 	
-	
+	public void setTotalPrice(int totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public Cable getCable() {
+		return cable;
+	}
+
+	public void setCable(Cable cable) {
+		this.cable = cable;
+	}
 	
 }

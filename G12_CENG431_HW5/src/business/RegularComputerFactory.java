@@ -37,7 +37,7 @@ public class RegularComputerFactory implements ComputerAbstractFactory {
 	}
 	
 	public Computer createComputer() {
-		return new GamingComputer(keyboard, mouse, monitor, headphone, CPU, RAM);		
+		return new RegularComputer(keyboard, mouse, monitor, headphone, CPU, RAM);		
 	};
 
 }
