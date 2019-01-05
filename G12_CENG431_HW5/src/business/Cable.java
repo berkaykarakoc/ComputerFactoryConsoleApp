@@ -1,5 +1,5 @@
 package business;
 
-public abstract class Cable {
-
+public enum Cable {
+	GOLD, SILVER, COPPER
 }
