@@ -1,38 +1,35 @@
 package business;
 
-public class RegularComputerFactory implements ComputerAbstractFactory {
+public class RegularComputerFactory implements ComputerFactory {
 
-	private int inchArray[] = {18,21};
-	private String versionArray[] = {"i3", "i5"};
-	private int capacityArray[] = {32,64,128};
-	
-	private Device keyboard;
-	private Device mouse;
-	private Device monitor;
-	private Device headphone;
-	private Device CPU;
-	private Device RAM;
-	
-	public RegularComputerFactory() 
-	{
-		this.keyboard = new Keyboard((int) (Math.random()*108+84),
-									false,
-									(int) (Math.random()*450+80));
-		this.mouse = new Mouse(true,
-								(int) (Math.random()*78+27));
-		this.monitor = new Monitor(inchArray[(int)(Math.random()*2)],
-									(int)(Math.random()*1500+900));
-		this.headphone = new Headphone(false, false, 
-										(int)(Math.random()*400+40));
-		this.CPU = new CPU(versionArray[(int)(Math.random()*2)],
-							(float) (Math.random()*6.0+3.0),
-							(int) (Math.random()*12000+8000));
-		this.RAM = new RAM(capacityArray[(int)(Math.random()*3)],
-							(int) (Math.random()*3500+1500));
+	@Override
+	public Keyboard createKeyboard() {
+		return new RegularKeyboard();
+	}
+
+	@Override
+	public Mouse createMouse() {
+		return new GamingMouse();
+	}
+
+	@Override
+	public Headphone createHeadphone() {
+		return new RegularHeadphone();
+	}
+
+	@Override
+	public Monitor createMonitor() {
+		return new RegularMonitor();
+	}
+
+	@Override
+	public CPU createCPU() {
+		return new RegularCPU();
+	}
+
+	@Override
+	public RAM createRAM() {
+		return new RegularRAM();
 	}
 	
-	public Computer createComputer() {
-		return new RegularComputer(keyboard, mouse, monitor, headphone, CPU, RAM);		
-	};
-
 }

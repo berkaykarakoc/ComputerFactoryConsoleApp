@@ -1,38 +1,35 @@
 package business;
 
-public class GamingComputerFactory implements ComputerAbstractFactory {
-	
-	private int inchArray[] = {18,21,25,27};
-	private String versionArray[] = {"i5", "i7"};
-	private int capacityArray[] = {128,256};
-	
-	private Device keyboard;
-	private Device mouse;
-	private Device monitor;
-	private Device headphone;
-	private Device CPU;
-	private Device RAM;
-	
-	public GamingComputerFactory() 
-	{
-		this.keyboard = new Keyboard((int) (Math.random()*108+84),
-									true,
-									(int) (Math.random()*1500+500));
-		this.mouse = new Mouse(false,
-								(int) (Math.random()*850+300));
-		this.monitor = new Monitor(inchArray[(int)(Math.random()*4)],
-									(int)(Math.random()*3500+2500));
-		this.headphone = new Headphone(true, true, 
-										(int)(Math.random()*1900+600));
-		this.CPU = new CPU(versionArray[(int)(Math.random()*2)],
-							(float) (Math.random()*6.0+3.0),
-							(int) (Math.random()*24000+14000));
-		this.RAM = new RAM(capacityArray[(int)(Math.random()*2)],
-							(int) (Math.random()*19000+7000));
+public class GamingComputerFactory implements ComputerFactory {
+
+	@Override
+	public Keyboard createKeyboard() {
+		return new GamingKeyboard();
 	}
-	
-	public Computer createComputer() {
-		return new GamingComputer(keyboard, mouse, monitor, headphone, CPU, RAM);		
-	};
-	
+
+	@Override
+	public Mouse createMouse() {
+		return new GamingMouse();
+	}
+
+	@Override
+	public Headphone createHeadphone() {
+		return new GamingHeadphone();
+	}
+
+	@Override
+	public Monitor createMonitor() {
+		return new GamingMonitor();
+	}
+
+	@Override
+	public CPU createCPU() {
+		return new GamingCPU();
+	}
+
+	@Override
+	public RAM createRAM() {
+		return new GamingRAM();
+	}
+
 }

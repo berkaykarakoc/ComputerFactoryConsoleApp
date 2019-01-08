@@ -1,9 +1,12 @@
 package business;
 
-public class ComputerFactory {
+public interface ComputerFactory {
 
-	public static Computer getComputer(ComputerAbstractFactory abstractFactory){
-		return abstractFactory.createComputer();
-	}
+	Keyboard createKeyboard();
+	Mouse createMouse();
+	Headphone createHeadphone();
+	Monitor createMonitor();
+	CPU createCPU();
+	RAM createRAM();
 	
 }
